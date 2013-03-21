@@ -16,7 +16,7 @@ main(void)
 	static int		statval;
 
 	globval = 1; autoval = 2; regival = 3; volaval = 4; statval = 5;
-	printf("Global Addr = %p,Vari Addr = %p,Volatile Addr = %p,Static Addr = %p\n",&globval,&autoval,&volaval,&statval);
+	printf("Global Addr = %p,Vari Addr = %p,Register Addr = %p,Volatile Addr = %p,Static Addr = %p\n",&globval,&autoval,&regival,&volaval,&statval);
 	if (setjmp(jmpbuffer) != 0) {
 		printf("after longjmp:\n");
 		printf("globval = %d, autoval = %d, regival = %d,"
