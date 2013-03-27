@@ -1,4 +1,4 @@
 cpp
 ===
 
-unix _programming
+unix(linux) _programming && algorithm(data structure) 
