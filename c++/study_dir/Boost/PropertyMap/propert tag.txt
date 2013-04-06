@@ -1,0 +1,23 @@
+The following property tags are defined inboost/graph/properties.hpp.
+namespace boostf
+{
+	enum edge_name_t { edge_name};
+	enum edge_weight_t { edge_weight};
+	enum edge_index_t { edge_index };
+	enum edge_capacity_t { edge_capacity };
+	enum edge_residual_capacity_t { edge_residual_capacity };
+	enum edge_reverse_t { edge_reverse };
+	enum vertex_name_t { vertex_name};
+	enum vertex_distance_t { vertex_distance };
+	enum vertex_index_t { vertex_index };
+	enum vertex_color_t { vertex_color };
+	enum vertex_degree_t { vertex_degree};
+	enum vertex_out_degree_t { vertex_out_degree};
+	enum vertex_in_degree_t { vertex_in_degree};
+	enum vertex_discover_time_t { vertex_discover_time };
+	enum vertex_finish_time_t { vertex_finish_time };
+	enum graph_name_t { graph_name};
+	BOOSTINSTALL PROPERTY(vertex,index);
+	BOOSTINSTALL PROPERTY(edge,index);
+	// . . .
+}
