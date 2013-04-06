@@ -1,0 +1,11 @@
+/*
+ *openlog， syslog， closelog::系统日志写入接口
+ *
+ */
+
+#include "apue.h"
+
+int main()
+{
+	
+}
