@@ -1,0 +1,31 @@
+#include <iostream>
+#include <climits>
+
+int cal(int a[],int len,int &start,int &end)
+{
+	int max = INT_MIN;
+	int temp = 0;
+	for(int i=0;i<len;i++)
+	{
+		temp+=a[i];
+		if(temp>=0)
+		{
+			if(max<temp)
+				max = temp;
+		}else
+		{
+			temp = 0;
+		}
+	}
+	return max;
+}
+
+int main()
+{
+	int a[10] = {-10,1,2,3,4,-5,-23,3,7,-21};
+	int b[6] = {-2,11,-4,13,-5,-2};
+	int max;
+	int start,end;
+	max = cal(b,6,start,end);
+	std::cout << max << std::endl;
+}

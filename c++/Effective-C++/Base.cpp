@@ -1,0 +1,61 @@
+#include "Base.h"
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int defaultFunc(const Base& base)
+{
+	cout << "default Function" <<endl;
+	return 0;
+	}
+
+int myFunc(const Base& base)
+{
+	std::cout << "myFunc Function" <<std::endl;
+	return 0;
+	}
+
+
+Base::Base(int i,CalcFunc f = defaultFunc):x(i),pfunc(f)
+{
+	mf1(1);
+}
+	
+Base::Base(){}	
+
+Base::~Base(){}
+	
+void Base::mf1(int x)
+{
+	cout << "Base mf1(int x) ";
+	cout <<" Old:"<< this->x;
+	this->x = x;
+	cout <<" Now:"<< this->x << endl;
+}
+		
+void Base::mf2()
+{
+	cout << "Base mf2()" <<endl;
+}
+		
+void Base::mf3()
+{
+	cout << "Base mf3()" <<endl;
+}
+		
+void Base::mf3(double x)
+{
+	cout << "Base mf3(double x)" <<endl;
+}
+		
+void Base::fun()
+{
+	pfunc(*this);
+	nvi();
+}
+		
+		
+void Base::nvi()
+{
+	cout << "nvi in end"<<endl;
+}

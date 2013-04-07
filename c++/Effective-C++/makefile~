@@ -1,0 +1,18 @@
+main:main.o Base.o Derived.o
+	echo "linking"
+	g++ main.o Base.o Derived.o -o main
+	
+main.o:main.cpp
+	echo "compiling main.cpp"
+	gcc -c main.cpp -o main.o
+
+Base.o:Base.cpp
+	echo "compiling Base.cpp"
+	gcc -c Base.cpp -o Base.o
+	
+Derived.o:Derived.cpp
+	echo "compiling Derived.cpp"
+	gcc -c Derived.cpp -o  Derived.o
+
+clean:
+	rm *.o,main
