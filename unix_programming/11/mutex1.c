@@ -31,6 +31,7 @@ foo_hold(struct foo *fp) /* add a reference to the object */
 {
 	pthread_mutex_lock(&fp->f_lock);
 	fp->f_count++;
+	sleep(3);
 	pthread_mutex_unlock(&fp->f_lock);
 }
 
@@ -51,12 +52,16 @@ struct foo *fptr;
 
 void* thr_fn(void *arg)
 {
+	pthread_t pt;
+	pid_t pid;
+	pt = pthread_self();
+	pid = getpid();
 	if(fptr)
 	{
 		foo_hold(fptr);
-		fptr->count++;
+		//fptr->count++;
 		sleep(2);
-		printf("count = %d\n",fptr->count);
+		printf("count = %d,thread_id = %u pid = %u\n",fptr->f_count,(unsigned int)pt,pid);
 	    foo_rele(fptr);
 	}
 	return (void *)1;
