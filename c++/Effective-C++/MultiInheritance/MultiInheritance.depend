@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1365578799 source:/home/wh/C-World/c++/Effective-C++/MultiInheritance/main.cpp
+	<iostream>
+	"apue.h"
+
