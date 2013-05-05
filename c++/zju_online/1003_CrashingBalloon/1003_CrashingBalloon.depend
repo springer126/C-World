@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1365648972 source:/home/wenhui/C-World/c++/zju_online/1003_CrashingBalloon/main.cpp
+	<iostream>
+	<cstring>
+
